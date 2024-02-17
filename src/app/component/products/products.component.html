@@ -1,0 +1,41 @@
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-10 offset-1">
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let skill of skills">{{skill}}</li>
+            </ul>
+        </div>
+    </div>
+</div> -->
+
+<div class="text-center mb-4" (click)="updateItem()">
+    <button class="btn btn-primary" [disabled]="isDisable">add Product</button>
+</div>
+
+<div class="text-center mb-4" (click)="removeItem()">
+    <button class="btn btn-primary" [disabled]="noOfProInCart === 0">remove Product</button>
+</div>
+
+<p class="alert alert-info mb-4">
+    {{proInCart}}
+</p>
+
+<div class="form-group">
+    <label for="searchPro">Search Product</label>
+    <input type="text" class="form-control" (keyup)="onProductSearch($event)">
+</div>
+
+<p class="alert alert-info">
+    {{searchProduct}}
+</p>
+
+<div class="form-group">
+    <label for="searchProduct">searchProduct</label>
+    <input type="text" class="form-control" [(ngModel)]="searchedProduct">
+</div>
+
+<p class="alert alert-info">
+    {{searchedProduct}}
+</p>
+
+
